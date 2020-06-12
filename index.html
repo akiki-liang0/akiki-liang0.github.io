@@ -90,6 +90,50 @@
                 Close
             </div>
         </div>
-        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript">
+                        let i=0;
+            const project = document.getElementsByClassName('grid-item');
+            const projLen = project.length;
+            const closePopup = document.getElementById('close-popup');
+
+            function toggle() {
+                var nav = document.getElementById('main');
+                var navMobile = document.getElementById('nav-mobile');
+                nav.classList.toggle('active');
+                navMobile.classList.toggle('active');
+            }
+            function popUp() {
+                const blur = document.getElementById('blur');
+                blur.classList.toggle('active');
+                const projPop = document.getElementById('project-popup');
+                projPop.classList.toggle('active');
+            }
+
+            /*function changeBackgroundColor(elementClassName, hexColor) {
+            
+            }*/
+            const sourceLink = document.getElementsByClassName('source-link');
+            
+            const sourceLinkLen = sourceLink.length;
+        
+            /*for ( ; i < sourceLinkLen; i++) {
+                
+                sourceLink[i].addEventListener('mouseover', () => {
+                    console.log(this);
+                    sourceLink[i].style.cssText = "background-color: #ff3d6e";
+                });
+            }*/
+            
+
+            /*for( ; i < projLen; i++) {
+                project[i].addEventListener('click', () => {
+                    popUp();
+                });
+            }*/
+            
+            closePopup.addEventListener('click', () => {
+                popUp();
+            });
+        </script>
     </body>
 </html>
