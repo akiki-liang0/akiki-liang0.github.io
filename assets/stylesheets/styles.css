@@ -162,16 +162,6 @@ header .name-logo {
     width: 100%;
 }
 
-.nav-links li a:hover {
-    font-style: italic;
-    -webkit-animation-name: underline-extend-up;
-            animation-name: underline-extend-up;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes underline-extend-up {
     0% {
         background-size: 0 0;
@@ -422,15 +412,12 @@ Social Links
     height: 50px;
     text-decoration: none;
     margin: 10px 0 0;
+    background-image: none;
+    background-color: none;
 }
 
 .social li a img {
     max-width: 40px;
-}
-.social li a:hover {
-    background-image: -o-linear-gradient(right, var(--swatch-color-1) 0%, var(--swatch-color-4) 100%);
-    background-image: -webkit-gradient(linear, right top, left top, from(var(--swatch-color-1)), to(var(--swatch-color-4)));
-    background-image: linear-gradient(to left, var(--swatch-color-1) 0%, var(--swatch-color-4) 100%);
 }
 
 
@@ -523,15 +510,6 @@ Projects
     width: 25px;
 }
 
-.source-link {
-    text-decoration: none;
-    display: inline-block;
-    margin: auto;
-    font-size: 0.8em;
-    margin-top: 10px;
-    padding: 10px 8px;
-}
-
 .source-link img {
     float: left;
 }
@@ -542,9 +520,14 @@ Projects
     padding-left: 3px;
 }
 
-.source-link:hover {
-    background-color: var(--swatch-color-2);
-    cursor: pointer;
+.source-link {
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    font-size: 0.8em;
+    margin-top: 10px;
+    padding: 10px 8px;
+    background: transparent;
 }
 
 .view-project {
@@ -705,5 +688,29 @@ test to change for other screen sizes */
 
     .scroll {
         display: none;
+    }
+}
+
+@media (hover: hover) {
+    .source-link:hover {
+        background-color: var(--swatch-color-2);
+        cursor: pointer;
+    }
+
+    .social li a:hover {
+        background-image: -o-linear-gradient(right, var(--swatch-color-1) 0%, var(--swatch-color-4) 100%);
+        background-image: -webkit-gradient(linear, right top, left top, from(var(--swatch-color-1)), to(var(--swatch-color-4)));
+        background-image: linear-gradient(to left, var(--swatch-color-1) 0%, var(--swatch-color-4) 100%);
+        background-color: var(--swatch-color-1);
+    }
+
+    .nav-links li a:hover {
+        font-style: italic;
+        -webkit-animation-name: underline-extend-up;
+                animation-name: underline-extend-up;
+        -webkit-animation-duration: 0.5s;
+                animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
     }
 }
