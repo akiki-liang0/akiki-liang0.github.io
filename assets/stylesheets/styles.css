@@ -464,6 +464,8 @@ Projects
 
 .mini-description {
     font-size: 0.7em;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .blur-container#blur.active {
